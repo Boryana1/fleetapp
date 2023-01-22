@@ -1,2 +1,4 @@
-package controllers;public class ContactController {
+package controllers;
+
+public class ContactController {
 }
