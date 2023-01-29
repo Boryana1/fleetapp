@@ -1,2 +1,6 @@
-package controllers;public class EmployerController {
+package controllers;
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class EmployeeController {
 }
