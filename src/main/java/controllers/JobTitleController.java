@@ -1,2 +1,6 @@
-package controllers;public class JobTitleController {
+package controllers;
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class JobTitleController {
 }
