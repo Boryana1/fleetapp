@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class VehicleTypeController {
 
     @GetMapping("/vehicletypes")
-    public String getCountries() {
+    public String getVehicleTypes() {
         return "VehicleType";
     }
 

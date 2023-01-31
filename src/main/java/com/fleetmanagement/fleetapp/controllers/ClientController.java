@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class ClientController {
 
     @GetMapping("/clients")
-    public String getCountries() {
+    public String getClients() {
         return "Client";
     }
 

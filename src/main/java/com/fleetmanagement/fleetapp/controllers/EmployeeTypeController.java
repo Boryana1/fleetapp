@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class EmployeeTypeController {
 
     @GetMapping("/employeetypes")
-    public String getCountries() {
+    public String getEmployeeTypes() {
         return "EmployeeType";
     }
 
