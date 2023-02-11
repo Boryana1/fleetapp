@@ -3,7 +3,7 @@ $('document').ready(function(){
     $('table #edit-button').on('click', function(event){
         event.preventDefault();
 
-//      /countries/findById/?id=1
+//      this = $('table #edit-button') <a>
 
         var href = $(this).attr('href');
 
