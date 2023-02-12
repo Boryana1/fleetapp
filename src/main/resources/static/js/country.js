@@ -19,4 +19,14 @@ $('document').ready(function(){
         $('#editModal').modal();
     })
 
+    $('table #delete-button').on('click', function(event){
+        event.preventDefault();
+
+        var href = $(this).attr('href')
+
+        $('#confirm-delete-button').attr('href', href);
+
+        $('#deleteModal').modal();
+    });
+
 });
