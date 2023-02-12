@@ -32,10 +32,22 @@ public class CountryController {
         return "redirect:/countries";
     }
 
-    @RequestMapping("/countries/findById/{id}")
+    @RequestMapping("/countries/findById")
     @ResponseBody
-    public Optional <Country> findById(@PathVariable Integer id){
+    public Optional <Country> findById( Integer id){
         return countryService.findById(id);
     }
 
+//      ANOTHER OPTION
+//    @RequestMapping("/countries/findById/{id}")
+//    @ResponseBody
+//    public Optional <Country> findById(@PathVariable Integer id){
+//        return countryService.findById(id);
+//    }
+
+    @RequestMapping(value = "/countries/update", method = {RequestMethod.PUT, RequestMethod.GET})
+    public String update(Country country){
+        countryService.save(country);
+        return "redirect:/countries";
+    }
 }

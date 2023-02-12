@@ -425,7 +425,9 @@
                   <td th:text="${country.code}"></td>
                   <td>
                       <div class="btn-group">
-                          <a th:href="@{/countries/findById/{id}(id=${country.id})}" class="btn btn-primary" id="edit-button">Edit</a>
+<!--                          ANOTHER OPTION FOR SPRING-->
+<!--                      <a th:href="@{/countries/findById/{id}(id=${country.id})}" class="btn btn-primary" id="edit-button">Edit</a>-->
+                          <a th:href="@{/countries/findById(id=${country.id})}" class="btn btn-primary" id="edit-button">Edit</a>
                       </div>
                   </td>
               </tr>
