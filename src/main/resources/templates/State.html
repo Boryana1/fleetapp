@@ -522,7 +522,7 @@
                       </div>
 
                       <div class="form-group">
-                          <button type="sumbit" class="btn btn-primary">Submit</button>
+                          <button type="submit" class="btn btn-primary">Submit</button>
                       </div>
 
                   </form>
@@ -571,11 +571,22 @@
 
                       <div class="form-group">
                           <label for="country-edit" class="col-form-label">Country:</label>
-                          <input type="text" class="form-control" id="country-edit" name="country" readonly>
+                          <!--                          the name of the drop-down list is the name of the foreign key-->
+                          <select id="country-edit" class="form-control" name="countryid">
+                              <option th:each="country : ${countries}"
+                                      th:value="${country.id}"
+                                      th:text="${country.description}">
+                              </option>
+                          </select>
                       </div>
 
+<!--                      <div class="form-group">-->
+<!--                          <label for="country-edit" class="col-form-label">Country:</label>-->
+<!--                          <input type="text" class="form-control" id="country-edit" name="country" readonly>-->
+<!--                      </div>-->
+
                       <div class="form-group">
-                          <button type="sumbit" class="btn btn-primary">Submit</button>
+                          <button type="submit" class="btn btn-primary">Submit</button>
                       </div>
 
                   </form>
@@ -599,30 +610,29 @@
                   </button>
               </div>
               <div class="modal-body">
-                  <form th:action="@{/states}" method="GET">
 
                       <div class="form-group">
-                          <label for="id-edit" class="col-form-label">Id:</label>
+                          <label for="id-details" class="col-form-label">Id:</label>
                           <input type="text" class="form-control" id="id-details" name="id" readonly>
                       </div>
 
                       <div class="form-group">
-                          <label for="name-edit" class="col-form-label">Name:</label>
+                          <label for="name-details" class="col-form-label">Name:</label>
                           <input type="text" class="form-control" id="name-details" name="name" readonly>
                       </div>
 
                       <div class="form-group">
-                          <label for="capital-edit" class="col-form-label">Capital:</label>
+                          <label for="capital-details" class="col-form-label">Capital:</label>
                           <input type="text" class="form-control" id="capital-details" name="capital" readonly>
                       </div>
 
                       <div class="form-group">
-                          <label for="code-edit" class="col-form-label">Code:</label>
+                          <label for="code-details" class="col-form-label">Code:</label>
                           <input type="text" class="form-control" id="code-details" name="code" readonly>
                       </div>
 
                       <div class="form-group">
-                          <label for="country-edit" class="col-form-label">Country:</label>
+                          <label for="country-details" class="col-form-label">Country:</label>
                           <input type="text" class="form-control" id="country-details" name="country" readonly>
                       </div>
 
@@ -635,7 +645,6 @@
 <!--                          <input type="text" class="form-control" id="lastModifiedDateDetails" name="lastModifiedDate" readonly>-->
 <!--                      </div>-->
 
-                  </form>
               </div>
               <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
