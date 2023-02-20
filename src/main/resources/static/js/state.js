@@ -13,7 +13,7 @@ $('document').ready(function(){
             $('#name-edit').val(state.name);
             $('#capital-edit').val(state.capital);
             $('#code-edit').val(state.code);
-            $('#country-edit').val(state.country.description);
+            $('#country-edit').val(state.countryid);
 //            $('#country-edit').val(state.countryid);
         });
         $('#editModal').modal();
